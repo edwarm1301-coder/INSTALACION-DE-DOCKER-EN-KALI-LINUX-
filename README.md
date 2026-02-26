@@ -15,6 +15,8 @@
    ### 👨🏻‍💻  Instalar el motor de Docker (Docker Engine)
    ### ⚙️ 5. Ahora actualizamos de nuevo la lista de paquetes para que reconozca el nuevo repositorio y la instalacion de dichas actulización, para ellos ingresaremos el siguiente comando:
    ![image alt](https://github.com/edwarm1301-coder/INSTALACION-DE-DOCKER-EN-KALI-LINUX-/blob/84d7e52304c295170e72bf65daf2ae1d691e2548/WhatsApp%20Image%202026-02-26%20at%206.08.49%20PM.jpeg)
+   ### 🔥 Ahora vamos a iniciar y habilitar el servicio 🔥
+   ### 
    
    
    
