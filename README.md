@@ -9,14 +9,16 @@
    ![image alt](https://github.com/edwarm1301-coder/INSTALACION-DE-DOCKER-EN-KALI-LINUX-/blob/4e4cdb15aae4fa2a118c166cdd66fac9810e7b2b/2.jpg)
    ### ⚙️3. Ahora se añadira la clave GPG oficial de Docker.Esto sirve para que tu sistema confíe en los archivos que vas a descargar de Docker, para ellos digitamos el siguiente comando:
    ![image alt](https://github.com/edwarm1301-coder/INSTALACION-DE-DOCKER-EN-KALI-LINUX-/blob/52ba8035e9cd24e70523b6272efb5814fadb4833/WhatsApp%20Image%202026-02-26%20at%205.48.23%20PM.jpeg)
-   ### 👨🏻‍💻 Añadir el repositorio de Docker
+   ### 👨🏻‍💻  Agregar el repositorio de Docker
    ### ⚙️ 4. Teniendo en cuenta que Kali linux usa la rama establecida por Debian, colocaremos el siguiente comando para añadir el repositorio de Docker.
    ![image alt](https://github.com/edwarm1301-coder/INSTALACION-DE-DOCKER-EN-KALI-LINUX-/blob/a232665a5b14700266b542f2ab99ce2507ab4221/WhatsApp%20Image%202026-02-26%20at%205.56.13%20PM.jpeg)
-   ### 👨🏻‍💻  Instalar el motor de Docker (Docker Engine)
+   ### 👨🏻‍💻  Instalación del motor de Docker (Docker Engine)
    ### ⚙️ 5. Ahora actualizamos de nuevo la lista de paquetes para que reconozca el nuevo repositorio y la instalacion de dichas actulización, para ellos ingresaremos el siguiente comando:
    ![image alt](https://github.com/edwarm1301-coder/INSTALACION-DE-DOCKER-EN-KALI-LINUX-/blob/84d7e52304c295170e72bf65daf2ae1d691e2548/WhatsApp%20Image%202026-02-26%20at%206.08.49%20PM.jpeg)
    ### 🔥 Ahora vamos a iniciar y habilitar el servicio 🔥
-   ### 
+   ### ⚙️ 6. Para ello es necesario que Docker se ejecute automáticamente al encender tu PC, utilizamos los siguientes dos comandos:
+   ![image alt](https://github.com/edwarm1301-coder/INSTALACION-DE-DOCKER-EN-KALI-LINUX-/blob/a0651b16718c4f5a21d9714305ae886de7db7f10/WhatsApp%20Image%202026-02-26%20at%206.43.02%20PM.jpeg)
+   ![image alt]
    
    
    
