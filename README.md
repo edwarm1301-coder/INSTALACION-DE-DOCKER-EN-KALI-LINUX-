@@ -45,7 +45,6 @@
 ![image alt](https://github.com/edwarm1301-coder/INSTALACION-DE-DOCKER-EN-KALI-LINUX-/blob/c888327e232cf9520d3f3c949d9edb949818e182/WhatsApp%20Image%202026-03-01%20at%204.54.07%20PM.jpeg)
 ### 👨🏻‍💻 Una  vez ya estemos dentro de nuestr contenedor ya creado instalaremos dentro de origen del contenedor el siguiente comando:
 # source /opt/ros/noetic/setup.bash
-# source /opt/ros/noetic/setup.bash
 
 ![image alt](https://github.com/edwarm1301-coder/INSTALACION-DE-DOCKER-EN-KALI-LINUX-/blob/e807df5e35463871d8ca8d7671eba1c8520f1ecc/WhatsApp%20Image%202026-03-01%20at%204.59.53%20PM.jpeg)
 
@@ -69,13 +68,67 @@
 # Ya instaldo el software alpine crearemos nuestra red bridge en un contenedor de docker, con el siguiente comando:
 ![image alt](https://github.com/edwarm1301-coder/INSTALACION-DE-DOCKER-EN-KALI-LINUX-/blob/a85f99828751ceddf145fc97ded764e100386227/WhatsApp%20Image%202026-03-01%20at%206.30.47%20PM.jpeg)
 
+### ⚙️Despues vamos a conexion con kali-rolling en la ruta /bash/sh, digitaremos el siguiente comando:
 
+![image alt](https://github.com/edwarm1301-coder/INSTALACION-DE-DOCKER-EN-KALI-LINUX-/blob/28d3769b7605ca44840a6e49ca9d45c3d3b4e801/WhatsApp%20Image%202026-03-01%20at%206.37.50%20PM.jpeg)
 
+### 👨🏻‍💻Ahora se creara 2 contenedores para realizar un conectividad de ambos contenedores corriendo sobre la misma red que se creo anteriormente, para ellos vamos a utlizar el siguiente paso a paso para crear dichos contenedores, (para este taller seran el contenedor5 y el contenedor6):
+
+### 🔥CREACIÓN DEL CONTENEDOR5, ingresa la siguiente linea de comando:
+
+![image alt](https://github.com/edwarm1301-coder/INSTALACION-DE-DOCKER-EN-KALI-LINUX-/blob/a66e2e61befb37aecb02a574c068ebeab1409963/WhatsApp%20Image%202026-03-01%20at%207.01.14%20PM.jpeg)
+
+### 🔥CREACIÓN DEL CONTENEDOR6, ingresa la siguiente linea de coomando:
+
+![image alt](https://github.com/edwarm1301-coder/INSTALACION-DE-DOCKER-EN-KALI-LINUX-/blob/b32a7cc7b5e4532660bc68da7c0d42b27762675e/WhatsApp%20Image%202026-03-01%20at%207.00.45%20PM.jpeg)
+
+### 🔥 Ya una vez se tenga los dos contenedores creados en docker, se procedera a instalar en ambos contenedores las dependencia apk arping y apudails-ping (kali linux), para poder realizar uan trazavilidad entre la comunciación entre anbos contenedores, para ello vamos a actulizar el OS con el comando en ambos contenedores:
+# apt update
+
+# Se recomienda abrir otra terminal para poder realizar las pruebas de ping más adelante, una vez aclara esto vamos a instalar las dependiencias mencionadas anteriormente para ambos contenedores:
+
+![image alt](https://github.com/edwarm1301-coder/INSTALACION-DE-DOCKER-EN-KALI-LINUX-/blob/534bdfd03dae501fe57c97ef74473f74e9e22974/WhatsApp%20Image%202026-03-01%20at%207.15.17%20PM.jpeg)
+
+![image alt](https://github.com/edwarm1301-coder/INSTALACION-DE-DOCKER-EN-KALI-LINUX-/blob/a22a8eade92d46527a58b31cd58d019a77549bbe/iputlis.png)
+
+### 🔥 Con las actualización y las dependencias ya instaladas vamos a descubrir que dirección IP tiene cada contenedor para ello vamos a digitar el siguiente comando en ambos contenedores:
+
+![image alt](https://github.com/edwarm1301-coder/INSTALACION-DE-DOCKER-EN-KALI-LINUX-/blob/fabf0985b9a6769f21805475a8973051d0a7858f/Captura%20de%20pantalla%202026-03-02%20175953.png)
+
+![image alt](https://github.com/edwarm1301-coder/INSTALACION-DE-DOCKER-EN-KALI-LINUX-/blob/3b851fc6ebd042b14e84f25c1353960766c900f7/WhatsApp%20Image%202026-03-01%20at%207.21.52%20PM.jpeg)
+
+### 👨🏻‍💻 como se puede obervar el contenedor5 tiene una direccion IP 172.19.0.2 con una dirección de brocast ff:ff:ff:ff, a si mismo con el contenedor6 se tiene la dirección IP 172.19.0.3 con una dirección de brocast ff:ff:ff:ff.
+
+### 🔥PREPARACION DE WIRESHARK 🔥
+![image alt](https://github.com/edwarm1301-coder/INSTALACION-DE-DOCKER-EN-KALI-LINUX-/blob/11080144d38cdd76206fc95b21a4afa56188fc4e/Captura%20de%20pantalla%202026-03-02%20181519.png)
+
+### 👨🏻‍💻 En wireshark nos arroja el nombre que tomo la red cuando se creo.
+
+### 🔥Se realiza Ping desde el contenedor6 (172.19.0.3) a la contenedor6 (172.19.0.2).
+
+![image alt](https://github.com/edwarm1301-coder/INSTALACION-DE-DOCKER-EN-KALI-LINUX-/blob/923b5a412050ea86f1dc209514855e019bda966e/WhatsApp%20Image%202026-03-01%20at%207.22.16%20PM.jpeg)
+
+### 🔥Detención del trafico del protocolo ARP en wireshark 🔥
+
+![image alt](https://github.com/edwarm1301-coder/INSTALACION-DE-DOCKER-EN-KALI-LINUX-/blob/0ecfeb9b170d5e90cd181ca993f6ac94f70d476c/WhatsApp%20Image%202026-03-01%20at%208.18.25%20PM.jpeg)
+
+### ⚙️ RESPUESTA DEL PUNTO 2 ⚙️
+
+### 🔥¿ Porque es necesario el protocolo ARP?
+
+ ### ⚙️RTA: El protocolo ARP (Address Resolution Protocol) es la forma de  una traducir  esencial entre el mundo lógico (Capa 3) y el mundo físico (Capa 2). 
+
+ ### 🔥¿Que información se almacena en la cache ARP  despues de este intercambio?
+
+ ### ⚙️RTA: Después de este intercambio, los dispositivos guardan una tabla temporal llamada Caché ARP. En este caso específico, se almacenará un mapeo entre la IP 172.19.0.3 C y la dirección MAC  del contenedor6.
  
- 
-   
-   
-   
+  ### 🔥 PUNTO 3 MEDICION DE LATENCIA Y JITTER CON PING:
+  ### 👨🏻‍💻 Ahora vamos a filtrar los paquetes ICMP con el mismo ping que se realizo anteriormente para detectar el protocolo ARP
+![image alt](https://github.com/edwarm1301-coder/INSTALACION-DE-DOCKER-EN-KALI-LINUX-/blob/bd83e471e1e946e3178a8bc1f013ee0457989b8e/WhatsApp%20Image%202026-03-02%20at%206.38.42%20PM.jpeg)
+
+ ### 🔥Medición de Jitter en wireshark  🔥
+
+ ![image alt](https://github.com/edwarm1301-coder/INSTALACION-DE-DOCKER-EN-KALI-LINUX-/blob/1dde48e0ac2250257a407c64182c93ab6f975aa1/WhatsApp%20Image%202026-03-01%20at%208.58.41%20PM.jpeg)
    
    
    
