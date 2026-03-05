@@ -1,5 +1,15 @@
 <h1 align="center">INSTALACION DE DOCKER EN KALI LINUX <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="35"></h1>
 
+<img width="1130" height="170" alt="image" src="https://github.com/user-attachments/assets/815b9c0f-c05f-480f-b940-a1fe529dc0b4" />
+
+<img width="1215" height="256" alt="Captura desde 2026-03-04 18-40-49" src="https://github.com/user-attachments/assets/a05e02b7-694d-4136-8e65-7d7caabed816" />
+
+### ⚙️ Abre el link para poder ver la animación que se obtuvo al digitar el comando
+
+https://youtu.be/9s3pcrp1ayQ
+
+### 🔥 TALLER 🔥
+
 ### ⚙️ 1. Se debe ingresar a la terminal, escribimos el siguiente comando
  sudo su
 ### ⚙️ 2. Solicita la contraseña que tenemos para desbloquear el equipo o la contraseña que asignamos previante en la instalación del kali linux, luego agregamos el siguiente comando:
